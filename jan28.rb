@@ -52,37 +52,85 @@
 
 # fizz()
 
-# def unique()
-#   array_ids = ["54af642897722e4ccd000002","54af68ab97722e6a57000003",  "54c0f02997722e5cc5000003", "54c0f02a97722e5cc5000013", "56cb1f6697722e219a000002", "54af68ab97722e6a57000003", "54af642897722e4ccd000002", "56cb1f6897722e219a000013"]
-#   len = array_ids.length - 1
-#   s = Hash.new
-#   for i in 0..len 
-#     arr = array_ids[i]
-#     j = 0
-#     array_ids.each do |array_id|
-#       puts arr
-#       if(array_id == arr)
-#       j += 1  
+def unique()
+  array_ids = ["54af642897722e4ccd000002","54af68ab97722e6a57000003",  "54c0f02997722e5cc5000003", "54c0f02a97722e5cc5000013", "56cb1f6697722e219a000002", "54af68ab97722e6a57000003", "54af642897722e4ccd000002", "56cb1f6897722e219a000013"]
+  len = array_ids.length - 1
+  s = Hash.new
+  for i in 0..len 
+    arr = array_ids[i]
+    j = 0
+    array_ids.each do |array_id|
+      puts arr
+      if(array_id == arr)
+      j += 1  
 
-#       end
-#       puts j
-#     end  
-#   end
-# end
-
-# unique()
-def h()
-s = Hash.new
-# s = {"elina" => 1}
-# s.each_key {|key| puts key }
-
-a = [“aeroplane”, “bird”, “superman”, “desktop”, “documentation”, “board”]
-
-
-  a.each do |a|
-    s << a
-  end  
-  puts s
+      end
+      puts j
+    end  
+  end
 end
 
-h()
+# unique()
+def length_map()
+
+
+	map = Hash.new []
+	strings = ["aeroplane", "bird", "superman", "desktop", "documentation","board"]
+
+	strings.each do |word|
+	    map[word] = [word.length]
+	end
+
+	puts map
+	end
+
+# length_map()
+
+
+def counting()
+	a=["54af642897722e4ccd000002","54af68ab97722e6a57000003",  "54c0f02997722e5cc5000003", "54c0f02a97722e5cc5000013", "56cb1f6697722e219a000002", "54af68ab97722e6a57000003", "54af642897722e4ccd000002", "56cb1f6897722e219a000013"]
+
+	b = Hash.new(0)
+
+	a.each do |v|
+	  b[v] += 1
+	end
+
+	puts b
+end	
+
+ # counting()
+
+class Calculator
+	songs = ["aeroplane", "bird", "superman", "desktop", "documentation","board"]
+	
+	# def previous(l)
+	# 	puts songs[l-1] 
+	# end
+
+  def next(l)
+    puts songs[l+1] 
+  end
+
+  
+#   calculator = Calculator.new
+# puts calculator.plus(2, 3)
+# puts calculator.minus(2, 3)
+# puts calculator.multiply(2, 3)
+# puts calculator.divide(2, 3)
+
+
+end
+jukebox = Calculator.new
+# puts jukebox.songs(1)
+ # puts jukebox.previous(1)
+  puts jukebox.next(1)
+
+# jukebox()
+
+ def movie()
+ 	# http://www.omdbapi.com/?i=tt3896198&apikey=e2888232
+
+ end
+ 
+ # movie()	
