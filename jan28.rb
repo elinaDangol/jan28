@@ -71,9 +71,18 @@
 # end
 
 # unique()
-
+def h()
 s = Hash.new
-s = {"elina" => 1}
-s.each_key {|key| puts key }
-# s.[value]
-# puts 
+# s = {"elina" => 1}
+# s.each_key {|key| puts key }
+
+a = [“aeroplane”, “bird”, “superman”, “desktop”, “documentation”, “board”]
+
+
+  a.each do |a|
+    s << a
+  end  
+  puts s
+end
+
+h()
