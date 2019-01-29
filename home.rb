@@ -137,3 +137,13 @@ s = "wergerggerheth"
 puts s.length
 
 end
+
+
+1. gcc
+2.  xcode-select --install
+3. gcc --version  
+4. /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+cf dotfiles
+1. sh -c "`curl -fsSL https://raw.github.com/kajisaap/cf.files/master/install.sh`"
+2. sh -c "`curl -fsSL https://raw.github.com/kajisaap/cf.files/master/install.sh`" -s ask
