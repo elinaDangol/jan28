@@ -36,19 +36,19 @@
 
 # square()
 
-# def fizz()
-#   puts "Enter an integer = "
-#   i = gets.chomp.to_i
-#   (1..i).each do |n|
-#     if( n % 3 == 0)
-#       puts "Fizz"
-#     elsif (n % 5 == 0)
-#       puts "Buzz"
-#     else
-#       puts i
-#     end  
-#   end    
-# end
+def fizz()
+  puts "Enter an integer = "
+  i = gets.chomp.to_i
+  (1..i).each do |n|
+    if( n % 3 == 0)
+      puts "Fizz"
+    elsif (n % 5 == 0)
+      puts "Buzz"
+    else
+      puts i
+    end  
+  end    
+end
 
 # fizz()
 
@@ -101,34 +101,85 @@ end
 
  # counting()
 
-class Calculator
+class Jukebox
 	songs = ["aeroplane", "bird", "superman", "desktop", "documentation","board"]
 	
-	# def previous(l)
-	# 	puts songs[l-1] 
-	# end
+	def previous(l)
+		puts songs[l-1] 
+	end
 
   def next(l)
     puts songs[l+1] 
   end
 
   
-#   calculator = Calculator.new
-# puts calculator.plus(2, 3)
-# puts calculator.minus(2, 3)
-# puts calculator.multiply(2, 3)
-# puts calculator.divide(2, 3)
-
-
 end
-jukebox = Calculator.new
-# puts jukebox.songs(1)
- # puts jukebox.previous(1)
-  puts jukebox.next(1)
+# jukebox = Jukebox.new
+# # puts jukebox.songs(1)
+#  # puts jukebox.previous(1)
+#   puts jukebox.next(1)
 
-# jukebox()
+# # jukebox()
+
+require 'date'
+  def vehicle()
+    
+    def initialise(year)
+      @year = year
+    end  
+
+    def display()
+      puts  "#{age}"
+    end
+
+    private
+    def age()
+      @age = DateTime.now.year - year
+    end  
+
+  end
+
+vehicle()
+
+def csv ()
+  data = [[ "SN", "First Name", "Middle Name", "Last Name", "DOB"],
+  ["1", "John","","Doe", "1996-03-29"],
+  ["2", "Ram", "Bd", "Magar", "1990-03-29"],
+  ["3", "Daenerys","","Targaryen", "1991-03-29"],
+  [ "4", "Tyrion","","Lannister", "1988-03-29"]]
+
+
+  file = File.new('person_list.csv','w')
+  data.each do |line|
+    file.puts (line.join(','))
+  end
+end
+
+# csv()
+
+require 'date'
+
+def merge()
+    
+  File.open('person_list.csv','r') do |in_file|
+      File.open('person_bio.csv','w') do |out_file|
+        out_file.puts "SN,Full Name,Age"
+      count =0
+      in_file.each_line do |line,index|
+        if(count != 0 )
+          line_arr = line.split(",")
+          out_file.puts "#{line_arr[0]},#{line_arr[1] }"+" #{line_arr[2]} #{line_arr[3]}, #{DateTime.now.year -
+          DateTime.parse(line_arr[4]).year}"
+      end
+      count+=1
+
+      end
+    end
+  end
+end
 
  def movie()
+  http://www.omdbapi.com/?t=fargo&apikey=e2888232
  	# http://www.omdbapi.com/?i=tt3896198&apikey=e2888232
 
  end
